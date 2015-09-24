@@ -51,14 +51,9 @@ public class PacmanBehaviorControl : MonoBehaviour {
 	bool IsValidMove(Vector2 dir) {
 		Vector2 pos = transform.position;
 		GetComponent <CircleCollider2D>().enabled = false;
-
 		bool isValid = (Physics2D.OverlapCircle(pos + dir, mRadius, WhatIsWall) == null);
+		GetComponent <CircleCollider2D>().enabled = true;
 		return isValid;
 	}
-	
-	void OnTriggerEnter2D (Collider2D other) {
-		if (other.gameObject.tag == "Pacdot") {
-			UnityEngine.Debug.Log ("ate");
-		}
-	}
+
 }
