@@ -3,16 +3,17 @@ using System.Collections;
 
 public class PacDotBehavior : MonoBehaviour {
 
-	static private int mScore = 0;
+	static private int mScore = -2;
 
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 			mScore++;
+			UnityEngine.Debug.Log ( "Score = " + mScore );
 			Destroy(gameObject);
 		}
 	}
 
-	public int GetScore() {
+	public static int GetScore() {
 		return mScore;
 	}
 }
