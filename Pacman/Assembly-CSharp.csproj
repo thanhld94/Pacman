@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DotGeneratorBehavior.cs" />
      <Compile Include="Assets\Scripts\PacDotBehavior.cs" />
      <Compile Include="Assets\Scripts\PacmanBehaviorControl.cs" />
  <Reference Include="UnityEngine.UI">
