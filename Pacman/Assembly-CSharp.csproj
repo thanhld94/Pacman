@@ -47,8 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\DotGeneratorBehavior.cs" />
      <Compile Include="Assets\Scripts\GameBehavior.cs" />
+     <Compile Include="Assets\Scripts\GhostGenerator.cs" />
      <Compile Include="Assets\Scripts\PacDotBehavior.cs" />
      <Compile Include="Assets\Scripts\PacmanBehaviorControl.cs" />
+     <Compile Include="Assets\Scripts\RedBehavior.cs" />
      <None Include="Assets\Fonts\OFL.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

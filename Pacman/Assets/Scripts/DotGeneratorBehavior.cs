@@ -11,8 +11,9 @@ public class DotGeneratorBehavior : MonoBehaviour {
 		for ( int i = 2; i < 28; i++ ) 
 			for ( int j = 2; j < 34; j++ ) {
 				Vector2 pos = new Vector2(i,j);
-				if ( isValidPosition(pos) ) 	
-					Instantiate( DotObject, pos, Quaternion.identity );
+				if (pos.x > 17 || pos.x < 12 || pos.y > 19 || pos.y < 15) // If not inside the ghost box
+					if (isValidPosition(pos)) // If is not inside a wall
+						Instantiate( DotObject, pos, Quaternion.identity );
 			}
 					
 	}

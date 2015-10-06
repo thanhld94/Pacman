@@ -13,6 +13,10 @@ public class PacmanBehaviorControl : MonoBehaviour {
 	private Vector2 mDestination;
 	private Vector2 mDirection;
 
+	public Vector2 GetPosition() {
+		return (Vector2)transform.position;
+	}
+
 	void Start () {
 		mRigidbody2D = GetComponent <Rigidbody2D>();
 		mAnimator = GetComponent <Animator>();
@@ -48,7 +52,7 @@ public class PacmanBehaviorControl : MonoBehaviour {
 	// Check if the next move in the "dir" direction is valid or not
 	// by casting a linecast from the current position to the next position pos + dir
 	// if the line does not intersect a wall layer then return true (valid move)
-	bool IsValidMove(Vector2 dir) {
+	private bool IsValidMove(Vector2 dir) {
 		Vector2 pos = transform.position;
 		GetComponent <CircleCollider2D>().enabled = false;
 		bool isValid = (Physics2D.OverlapCircle(pos + dir, mRadius, WhatIsWall) == null);
