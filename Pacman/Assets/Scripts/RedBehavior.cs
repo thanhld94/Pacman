@@ -12,7 +12,7 @@ public class RedBehavior : MonoBehaviour {
 	private Vector2 mTarget;
 	private Vector2 mDirection;
 
-	private float Speed = 0.3f;
+	private float Speed = 0.4f;
 	public LayerMask WhatIsWall;
 	private Vector2[] mDirs = new Vector2[] {Vector2.up, Vector2.down, Vector2.left, Vector2.right};
 
@@ -21,6 +21,12 @@ public class RedBehavior : MonoBehaviour {
 
 	public void DestroyRed() {
 		Destroy(gameObject);
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if (other.gameObject.tag == "Player") {
+			other.SendMessageUpwards("GameOver");
+		}
 	}
 
 	void Start () {
@@ -37,7 +43,7 @@ public class RedBehavior : MonoBehaviour {
 		Vector2 p = Vector2.MoveTowards (transform.position, mDestination, Speed);
 		mBody2D.MovePosition (p); 
 		
-		if ((Vector2) transform.position == mDestination) {
+		if ((Vector2) transform.position == mDestination && mQueue.Count == 0) {
 			//UnityEngine.Debug.Log ("Pos = " + transform.position);
 			mDirection = Vector2.zero;
 			int result = INF;

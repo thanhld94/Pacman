@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PacmanBehaviorControl : MonoBehaviour {
 
-	public float Speed = 0.4f;
+	private float Speed = 0.9f;
 	public LayerMask WhatIsWall;
 
 	private Rigidbody2D mRigidbody2D;
@@ -12,6 +12,10 @@ public class PacmanBehaviorControl : MonoBehaviour {
 	private float mRadius;
 	private Vector2 mDestination;
 	private Vector2 mDirection;
+
+	public void GameOver() {
+		Application.LoadLevel ("GameOverScene");
+	}
 
 	public Vector2 GetPosition() {
 		return (Vector2)transform.position;

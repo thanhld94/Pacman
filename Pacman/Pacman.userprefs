@@ -1,14 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../GameProject/Game2/Assets/Scripts/PlayerRangeBehavior.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GhostGenerator.cs">
     <Files>
-      <File FileName="../../GameProject/Game2/Assets/Scripts/MonsterGenerator.cs" Line="1" Column="1" />
-      <File FileName="../../GameProject/Game2/Assets/Scripts/monster.cs" Line="8" Column="22" />
-      <File FileName="../../GameProject/Game2/Assets/Scripts/PlayerBehavior.cs" Line="77" Column="8" />
-      <File FileName="../../GameProject/Game2/Assets/Scripts/enemy_attack.cs" Line="26" Column="4" />
-      <File FileName="../../GameProject/Game2/Assets/Scripts/attackTrigger.cs" Line="5" Column="27" />
-      <File FileName="../../GameProject/Game2/Assets/Scripts/PlayerMeleeBehavior.cs" Line="23" Column="8" />
-      <File FileName="../../GameProject/Game2/Assets/Scripts/PlayerRangeBehavior.cs" Line="20" Column="8" />
+      <File FileName="Assets/Scripts/GhostGenerator.cs" Line="21" Column="38" />
+      <File FileName="Assets/Scripts/DotGeneratorBehavior.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
